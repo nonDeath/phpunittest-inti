@@ -12,7 +12,7 @@ class Order
     public function __construct($id, $dataAccess)
     {
         if(empty($dataAccess)) {
-            throw new Exception("dataAccess es nulo!");
+            throw new InvalidArgumentException("dataAccess es nulo!");
         }
         $this->id = $id;
         $this->dataAccess = $dataAccess;

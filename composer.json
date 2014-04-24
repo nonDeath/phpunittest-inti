@@ -1,7 +1,8 @@
 {
     "autoload": {
         "classmap": [
-            "app/libraries/shop"
+            "app/libraries/shop",
+            "test/shop/doubles"
         ]
     }
 }

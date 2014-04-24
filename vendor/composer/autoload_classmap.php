@@ -8,4 +8,6 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Libraries\\Shop\\IShopDataAccess' => $baseDir . '/app/libraries/shop/IShopDataAccess.php',
     'App\\Libraries\\Shop\\Order' => $baseDir . '/app/libraries/shop/Order.php',
+    'App\\Libraries\\Shop\\OrderLine' => $baseDir . '/app/libraries/shop/OrderLine.php',
+    'DummyShopDataAccess' => $baseDir . '/test/shop/doubles/DummyShopDataAccess.php',
 );

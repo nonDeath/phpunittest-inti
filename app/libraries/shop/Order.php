@@ -1,8 +1,11 @@
-<?php
+<?php namespace App\Libraries\Shop;
 /**
  * Order class
  * Clase que representa una orden de compra
  */
+// fallback to include global class
+use \InvalidArgumentException;
+
 class Order
 {
     private $id;

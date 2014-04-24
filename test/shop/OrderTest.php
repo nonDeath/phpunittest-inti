@@ -1,5 +1,6 @@
 <?php
-
+use \InvalidArgumentException;
+use App\Libraries\Shop\Order;
 
 class OrderTest extends PHPUnit_Framework_TestCase
 {
@@ -7,7 +8,7 @@ class OrderTest extends PHPUnit_Framework_TestCase
      * Comprueba la creacion de una Orden
      * @expectedException InvalidArgumentException
      */
-    public function test()
+    public function testCreateNewOrder()
     {
         $data = null;
 

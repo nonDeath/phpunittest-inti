@@ -1,4 +1,4 @@
-<?php
+<?php namespace App\Libraries\Shop;
 
 interface IShopDataAccess
 {

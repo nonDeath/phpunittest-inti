@@ -6,6 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'IShopDataAccess' => $baseDir . '/app/libraries/shop/IShopDataAccess.php',
-    'Order' => $baseDir . '/app/libraries/shop/Order.php',
+    'App\\Libraries\\Shop\\IShopDataAccess' => $baseDir . '/app/libraries/shop/IShopDataAccess.php',
+    'App\\Libraries\\Shop\\Order' => $baseDir . '/app/libraries/shop/Order.php',
 );

@@ -14,6 +14,7 @@ class Order
         if(empty($dataAccess)) {
             throw new InvalidArgumentException("dataAccess es nulo!");
         }
+
         $this->id = $id;
         $this->dataAccess = $dataAccess;
 

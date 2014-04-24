@@ -123,4 +123,42 @@ class OrderTest extends PHPUnit_Framework_TestCase
 
         $this->assertTrue($data->getSaved());
     }
+
+    public function testOrderAndVerifyExpectations()
+    {
+        $data = $this->getMock('IShopDataAccess', array("save"));
+
+        $o = new Order(6, $data);
+
+        $o->getOrderLines()->addOrderLine(1234, 1);
+        $o->getOrderLines()->addOrderLine(4321, 3);
+
+        $this->assertFalse($o===null);
+    }
+
+    public function testOrderCalculateTotalWithMockStub()
+    {
+        $data = $this->getMock('IShopDataAccess', array('getProductPrice'));
+
+        $data->expects($this->once())
+            ->method('getProductPrice')
+            ->with(1234)
+            ->will($this->returnValue(45.0));
+        /*
+        $data->expects($this->once())
+            ->method('getProductPrice')
+            ->with(2345)
+            ->will($this->returnValue(15.0));
+        */
+        $o = new Order(11, $data);
+
+        $o->getOrderLines()->addOrderLine(1234, 3);
+        // $o->getOrderLines()->addOrderLine(2345, 2);
+
+        $total[] = $o->getOrderLines()->getList()[0]->getTotal();
+        // $total[] = $o->getOrderLines()->getList()[1]->getTotal();
+
+        $this->assertEquals(135, $total[0]);
+        // $this->assertEquals(30, $total[1]);
+    }
 }

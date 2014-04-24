@@ -10,5 +10,9 @@ return array(
     'App\\Libraries\\Shop\\Order' => $baseDir . '/app/libraries/shop/Order.php',
     'App\\Libraries\\Shop\\OrderLine' => $baseDir . '/app/libraries/shop/OrderLine.php',
     'App\\Libraries\\Shop\\OrderLineCollection' => $baseDir . '/app/libraries/shop/OrderLineCollection.php',
+    'App\\Libraries\\Shop\\Product' => $baseDir . '/app/libraries/shop/Product.php',
     'DummyShopDataAccess' => $baseDir . '/test/shop/doubles/DummyShopDataAccess.php',
+    'FakeShopDataAccess' => $baseDir . '/test/shop/doubles/FakeShopDataAccess.php',
+    'SpyShopDataAccess' => $baseDir . '/test/shop/doubles/SpyShopDataAccess.php',
+    'StubShopDataAccess' => $baseDir . '/test/shop/doubles/StubShopDataAccess.php',
 );

@@ -21,7 +21,7 @@ class Order
         $this->id = $id;
         $this->dataAccess = $dataAccess;
 
-        $this->orderLines = array();
+        $this->orderLines = new OrderLineCollection($this);
     }
 
     public function save()

@@ -26,4 +26,15 @@ class OrderTest extends PHPUnit_Framework_TestCase
         $this->assertFalse($o===null);
     }
 
+    public function testOrderAddOrdersLines()
+    {
+        $data = new DummyShopDataAccess;
+
+        $o = new Order(1, $data);
+
+        $o->getOrderLines()->addOrderLine(1, 1);
+
+        $this->assertEquals(1, sizeof($o->getOrderLines()->getList()));
+    }
+
 }
